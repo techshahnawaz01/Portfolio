@@ -248,12 +248,29 @@ $(function () {
         const toggleBtn = document.getElementById('themeToggle');
         if (!toggleBtn) return;
 
+        const darkLogo = 'img/logos/ts-high-resolution-logo-transparent.png';
+        const lightLogo = 'img/logos/ts-high-resolution-logo-grayscale.png';
+
+        function updateLogo(theme) {
+            const logos = document.querySelectorAll('.mil-logo img');
+            logos.forEach(function(img) {
+                if (theme === 'light') {
+                    img.src = lightLogo;
+                } else {
+                    img.src = darkLogo;
+                }
+            });
+        }
+
         // Check saved preference or system preference
         const savedTheme = localStorage.getItem('theme');
         const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
         
         if (savedTheme === 'light' || (!savedTheme && prefersLight)) {
             document.documentElement.setAttribute('data-theme', 'light');
+            updateLogo('light');
+        } else {
+            updateLogo('dark');
         }
 
         toggleBtn.addEventListener('click', function() {
@@ -261,9 +278,11 @@ $(function () {
             if (isLight) {
                 document.documentElement.removeAttribute('data-theme');
                 localStorage.setItem('theme', 'dark');
+                updateLogo('dark');
             } else {
                 document.documentElement.setAttribute('data-theme', 'light');
                 localStorage.setItem('theme', 'light');
+                updateLogo('light');
             }
         });
     }
