@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- swiper css -->
     <link rel="stylesheet" href="css/plugins/swiper.min.css">
-    <!-- techshahnawazdev css -->
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/modern.css">
      <!-- favicon -->
      <link rel="icon" type="image/x-icon" href="img/icons/tech_shahnawaz_-logo-modified.png">
@@ -47,7 +47,7 @@
             <div class="mil-top-panel">
 
                 <!-- You need to remove the "mil-dot" class if you don't need a dot -->
-                <a href="index.html" class="mil-logo"> <img src="img/logos/mylogo.png" width="85px" alt=""> </a>
+                <a href="index.html" class="mil-logo"> <img src="img/logos/ts-high-resolution-logo-transparent.png" width="85px" alt=""> </a>
 
                 <div class="mil-navigation">
                     <nav id="swupMenu" class="mil-menu-transition">
@@ -146,7 +146,7 @@
                                 <li><span class="mil-upper mil-dark">Date:</span>&nbsp;&nbsp;<span class="mil-upper">August 2023</span></li>
                                 <li class="mil-upper mil-accent">Design</li>
                             </ul>
-                            <h1 class="mil-h1-sm mil-up mil-mb-60">How to Become a  Web Developper Road Map</h1>
+                            <h1 class="mil-h1-sm mil-up mil-mb-60">REST API Best Practices with Laravel & JWT Auth</h1>
                             <ul class="mil-breadcrumbs mil-up">
                                 <li><a href="index.html">Homepage</a></li>
                                 <li><a href="blog-1.html">Blog</a></li>
@@ -160,55 +160,30 @@
                     <!-- publication -->
                     <section class="mil-p-0-60">
 
-                        <p class="mil-text-xl mil-dark mil-up mil-mb-60">Are you passionate about Web developement and interested in pursuing a career as a Web Developper? Web development refers to the process of creating and maintaining websites or web applications. It involves various tasks such as designing the user interface, writing code to implement functionality, and setting up the backend infrastructure to support the website's operation. Web development can range from building simple static websites to complex dynamic web applications that interact with databases, handle user authentication, and offer a wide range of features and services.</p>
+                        <p class="mil-text-xl mil-dark mil-up mil-mb-60">Building scalable REST APIs with Laravel requires following best practices for security, performance, and maintainability. In this comprehensive guide, I'll share key techniques I've used in production applications, including JWT authentication, role-based access control, and optimized database queries.</p>
 
-                        <blockquote class="mil-up mil-mb-60">"Turning ideas into reality through code."</blockquote>
+                        <blockquote class="mil-up mil-mb-60">"Secure APIs are the backbone of modern web applications."</blockquote>
 
-                        <h5 class="mil-up mil-mb-30">1. Basic Web Technologies:</h5>
-                        <p class="mil-up mil-mb-60">° HTML5: Learn to structure content using HTML elements. <br>
-                            ° CSS3: Understand styling and layout techniques for web pages. <br>
-                            °  Basic JavaScript: Familiarize yourself with the fundamentals of programming and interactions.</p>
+                        <h5 class="mil-up mil-mb-30">1. JWT Authentication Implementation:</h5>
+                        <p class="mil-up mil-mb-60">JSON Web Tokens provide a stateless authentication mechanism. In Laravel, use tymon/jwt-auth package to generate and validate tokens. Implement refresh tokens for better security, and store sensitive payload data encrypted.</p>
 
-                        <h5 class="mil-up mil-mb-30">2. Front-End Development:</h5>
-                        <p class="mil-up mil-mb-60">° Advanced JavaScript: Dive deeper into JavaScript, covering topics like functions, objects, DOM manipulation, and asynchronous programming.
-                          <br>  °  Responsive Design: Learn to create websites that adapt to various screen sizes using media queries and flexible layouts.
-                          <br>°  CSS Preprocessors: Explore tools like Sass or Less to streamline your CSS workflow.
-                         <br>°   Version Control/Git: Master version control basics to collaborate and manage your code effectively.</p>
+                        <h5 class="mil-up mil-mb-30">2. Role-Based Access Control (RBAC):</h5>
+                        <p class="mil-up mil-mb-60">Create a robust RBAC system using Laravel Gates and Policies. Define roles (Super Admin, Admin, User) and permissions. Use middleware to protect routes based on user roles. This ensures users can only access resources they're authorized for.</p>
 
-                        <h5 class="mil-up mil-mb-30">3. Front-End Frameworks:</h5>
-                        <p class="mil-up mil-mb-60"> ° React, Angular, or Vue: Choose and specialize in one of these popular JavaScript frameworks for building dynamic and interactive user interfaces.</p>
+                        <h5 class="mil-up mil-mb-30">3. API Security Best Practices:</h5>
+                        <p class="mil-up mil-mb-60">Implement rate limiting to prevent DDoS attacks using Laravel's throttle middleware. Use HTTPS everywhere, sanitize all inputs to prevent SQL injection, and implement CORS properly. Hash sensitive data using bcrypt or Argon2.</p>
 
-                        <h5 class="mil-up mil-mb-30">4. Back-End Development:</h5>
-                        <p class="mil-up mil-mb-60">° Server-Side Language: Pick a language like JavaScript (Node.js), Python, Ruby, or PHP for server-side development.
-                        <br>°    Database Management: Learn about databases (SQL and/or NoSQL) and how to interact with them.
-                        <br>°    API Development: Understand how to create and consume APIs to connect front-end and back-end components.
-                         <br>°   Server Deployment: Learn to deploy applications using platforms like Heroku, AWS, or Azure. </p>
+                        <h5 class="mil-up mil-mb-30">4. Database Query Optimization:</h5>
+                        <p class="mil-up mil-mb-60">Use eager loading (with()) to avoid N+1 query problems. Index frequently queried columns, use database transactions for multiple operations, and implement query caching. Monitor slow queries using Laravel Debugbar.</p>
 
-                        <h5 class="mil-up mil-mb-30">5.  Full-Stack Development:</h5>
-                        <p class="mil-up mil-mb-60">° Combine Front-End and Back-End: Integrate your front-end and back-end skills to build complete web applications.
-                            <br>°  Authentication and Security: Explore user authentication techniques and security best practices.
-                            <br>°  Session Management: Learn how to manage user sessions and cookies.</p>
+                        <h5 class="mil-up mil-mb-30">5. RESTful API Design:</h5>
+                        <p class="mil-up mil-mb-60">Follow REST conventions: use proper HTTP verbs (GET, POST, PUT, DELETE), return appropriate status codes, structure URLs hierarchically, and version your APIs (/api/v1/). Use API resources (Laravel Resources) to transform data consistently.</p>
 
-                        <h5 class="mil-up mil-mb-30">6.  Web Performance Optimization:</h5>
-                        <p class="mil-up mil-mb-60">° Page Loading Speed: Study techniques to optimize website performance for faster loading times.
-                            <br>°  Caching: Understand caching mechanisms to reduce server load and improve user experience.</p>
+                        <h5 class="mil-up mil-mb-30">6. Error Handling & Logging:</h5>
+                        <p class="mil-up mil-mb-60">Implement global exception handlers, return consistent error responses in JSON format, and log errors using Laravel's logging facilities. Use Monoglog for storing logs in files, databases, or external services.</p>
 
-                        <h5 class="mil-up mil-mb-30">7. Additional Skills:</h5>
-                        <p class="mil-up mil-mb-60"> ° Responsive Images: Learn about optimizing images for various devices and resolutions.
-                            <br>°   Accessibility: Understand how to create web content that's accessible to all users, including those with disabilities.
-                            <br>°   Websockets and Real-Time Communication: Explore real-time data exchange between clients and servers.
-                            <br>°   Web Security: Deepen your knowledge of common security vulnerabilities and mitigation strategies.</p>
-
-                        <h5 class="mil-up mil-mb-30">8.  Project Portfolio:</h5>
-                        <p class="mil-up mil-mb-60"> ° Personal Projects: Build a portfolio of diverse web applications to showcase your skills.
-                            <br>°  Open Source Contributions: Contribute to open-source projects to gain experience and collaborate with other developers. </p>
-
-                        <h5 class="mil-up mil-mb-30">9. Continuous Learning:</h5>
-                        <p class="mil-up mil-mb-60"> ° Stay Updated: Web development is constantly evolving. Stay up-to-date with new tools, libraries, and best practices.</p>
-
-                        <h5 class="mil-up mil-mb-30">10. Soft Skills:</h5>
-                        <p class="mil-up mil-mb-60">° Communication: Effective communication is vital, especially when working in teams or with clients.
-                            <br>°   Problem Solving: Develop strong problem-solving skills to tackle complex challenges.</p>
+                        <h5 class="mil-up mil-mb-30">7. Testing APIs:</h5>
+                        <p class="mil-up mil-mb-60">Write unit tests using PHPUnit and feature tests for API endpoints. Use Postman collections for manual testing. Implement API testing with Laravel's HTTP testing methods - get(), post(), put(), delete().</p>
 
                         <div class="row">
                             <div class="col-lg-6">
@@ -356,7 +331,7 @@
     <script src="js/plugins/ScrollTrigger.min.js"></script>
     <!-- parallax js -->
     <script src="js/plugins/parallax.js"></script>
-    <!-- techshahnawazdev js -->
+    <!-- Main JS -->
     <script src="js/main.js"></script>
 
 </body>

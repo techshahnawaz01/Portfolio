@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- swiper css -->
     <link rel="stylesheet" href="css/plugins/swiper.min.css">
-    <!-- techshahnawazdev css -->
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/modern.css">
      <!-- favicon -->
      <link rel="icon" type="image/x-icon" href="img/icons/tech_shahnawaz_-logo-modified.png">
@@ -45,7 +45,7 @@
             <div class="mil-top-panel">
 
                 <!-- You need to remove the "mil-dot" class if you don't need a dot -->
-                <a href="index.html" class="mil-logo"> <img src="img/logos/mylogo.png" width="85px" alt=""> </a>
+                <a href="index.html" class="mil-logo"> <img src="img/logos/ts-high-resolution-logo-transparent.png" width="85px" alt=""> </a>
 
                 <div class="mil-navigation">
                     <nav id="swupMenu" class="mil-menu-transition">
@@ -144,7 +144,7 @@
                                 <li><span class="mil-upper mil-dark">Date:</span>&nbsp;&nbsp;<span class="mil-upper">August 2023</span></li>
                                 <li class="mil-upper mil-accent">Design</li>
                             </ul>
-                            <h1 class="mil-h1-sm mil-up mil-mb-60">Some Online Cources</h1>
+                            <h1 class="mil-h1-sm mil-up mil-mb-60">Full-Stack E-Voting Platform</h1>
                             <ul class="mil-breadcrumbs mil-up">
                                 <li><a href="index.html">Homepage</a></li>
                                 <li><a href="blog-1.html">Blog</a></li>
@@ -158,24 +158,33 @@
                     <!-- publication -->
                     <section class="mil-p-0-60">
 
-                        <p class="mil-text-xl mil-dark mil-up mil-mb-60">Are you passionate about Web developement and interested in pursuing a career as a Web Developper? Web development refers to the process of creating and maintaining websites or web applications. It involves various tasks such as designing the user interface, writing code to implement functionality, and setting up the backend infrastructure to support the website's operation. Web development can range from building simple static websites to complex dynamic web applications that interact with databases, handle user authentication, and offer a wide range of features and services.</p>
+                        <p class="mil-text-xl mil-dark mil-up mil-mb-60">Building a secure digital voting platform requires combining modern web technologies with robust authentication and real-time features. This article walks through how I built a full-stack e-voting system using Python FastAPI, React, and React Native with JWT authentication and OTP verification.</p>
 
-                        <blockquote class="mil-up mil-mb-60">"Turning ideas into reality through code."</blockquote>
+                        <blockquote class="mil-up mil-mb-60">"Democracy empowered by technology."</blockquote>
 
-                        <h5 class="mil-up mil-mb-30">1. FreeCodeCamp:</h5>
-                        <p class="mil-up mil-mb-60"> A free online learning platform focused on web development. It offers a comprehensive curriculum that covers HTML, CSS, JavaScript, front-end and back-end development, databases, and more.</p>
+                        <h5 class="mil-up mil-mb-30">1. Tech Stack Selection:</h5>
+                        <p class="mil-up mil-mb-60">Backend: Python FastAPI for high-performance async APIs. Frontend: React for web dashboard, React Native for mobile apps. Database: MySQL for storing votes, user data, and audit logs. Authentication: JWT with OTP verification for secure voter identification.</p>
 
-                        <h5 class="mil-up mil-mb-30">2. Udemy:</h5>
-                        <p class="mil-up mil-mb-60">Offers a wide range of web development courses taught by industry professionals. Courses are often focused on specific technologies and frameworks like HTML, CSS, JavaScript, React, Angular, Node.js, and more.</p>
+                        <h5 class="mil-up mil-mb-30">2. Multi-Tenant Architecture:</h5>
+                        <p class="mil-up mil-mb-60">Designed a multi-tenant system with role-based access: Super Admin manages elections, Admin manages voters, Voters cast votes. Each tenant has isolated data and configurations. Used Laravel's multi-tenancy concepts adapted for FastAPI.</p>
 
-                        <h5 class="mil-up mil-mb-30">3. Coursera:</h5>
-                        <p class="mil-up mil-mb-60"> Provides courses from top universities and institutions. You can find web development specializations covering front-end, back-end, full-stack development, and related topics.</p>
+                        <h5 class="mil-up mil-mb-30">3. JWT Authentication & OTP:</h5>
+                        <p class="mil-up mil-mb-60">Implemented JWT-based auth with access and refresh tokens. Voters receive OTP via SMS/email for verification. Used PyJWT library with secret key rotation. Token expiration and refresh mechanisms ensure security without persistent sessions.</p>
 
-                        <h5 class="mil-up mil-mb-30">4. Codecademy:</h5>
-                        <p class="mil-up mil-mb-60">Provides interactive coding lessons for web development, including HTML, CSS, JavaScript, and various frameworks. </p>
+                        <h5 class="mil-up mil-mb-30">4. Secure Voting Mechanism:</h5>
+                        <p class="mil-up mil-mb-60">One vote per user enforced through database constraints and backend validation. Votes stored with audit logs (timestamp, IP, user agent). Used database transactions to ensure atomic vote casting. Implemented double-submit prevention using idempotency keys.</p>
 
-                        <h5 class="mil-up mil-mb-30">5.  W3Schools:</h5>
-                        <p class="mil-up mil-mb-60">While not a traditional course platform, W3Schools offers extensive tutorials and references for web development technologies like HTML, CSS, JavaScript, and more.</p>
+                        <h5 class="mil-up mil-mb-30">5. Real-Time Analytics:</h5>
+                        <p class="mil-up mil-mb-60">Integrated WebSocket for live vote counting and results updates. React dashboard shows real-time charts using Chart.js. Admin can monitor turnout, demographics, and trends as votes come in.</p>
+
+                        <h5 class="mil-up mil-mb-30">6. Payment Integration:</h5>
+                        <p class="mil-up mil-mb-60">Added Razorpay for election fees or donations. Webhook handling for payment confirmation. File upload for voter ID verification using React Native's image picker with preview and validation.</p>
+
+                        <h5 class="mil-up mil-mb-30">7. Audit Logs & Transparency:</h5>
+                        <p class="mil-up mil-mb-60">Every action logged: voter registration, vote casting, admin changes. Logs immutable and exportable for election commission audits. Hash-chain logging to prevent tampering.</p>
+
+                        <h5 class="mil-up mil-mb-30">8. Deployment & Performance:</h5>
+                        <p class="mil-up mil-mb-60">Deployed FastAPI on AWS/Heroku with Redis caching. React SPA deployed on Netlify/Vercel. Database optimized with indexes on voter_id and election_id. Load testing with Locust to handle 10,000+ concurrent voters.</p>
 
                         
                         <div class="row">
@@ -324,7 +333,7 @@
     <script src="js/plugins/ScrollTrigger.min.js"></script>
     <!-- parallax js -->
     <script src="js/plugins/parallax.js"></script>
-    <!-- techshahnawazdev js -->
+    <!-- Main JS -->
     <script src="js/main.js"></script>
 
 </body>
