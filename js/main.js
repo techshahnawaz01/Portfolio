@@ -241,6 +241,37 @@ $(function () {
 
     /***************************
 
+    theme toggle
+
+    ***************************/
+    function initThemeToggle() {
+        const toggleBtn = document.getElementById('themeToggle');
+        if (!toggleBtn) return;
+
+        // Check saved preference or system preference
+        const savedTheme = localStorage.getItem('theme');
+        const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+        
+        if (savedTheme === 'light' || (!savedTheme && prefersLight)) {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+
+        toggleBtn.addEventListener('click', function() {
+            const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+            if (isLight) {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    }
+
+    initThemeToggle();
+
+    /***************************
+
     navigation
 
     ***************************/
